@@ -1,0 +1,61 @@
+<div class="description-container">
+    <h2>{{ game.name }}</h2>
+    <img src="{{ game.background_image }}" alt="">
+    <div class="information">
+        <h3>Genres:</h3>
+        <ng-container *ngFor="let genre of game.genres; let last = last">
+            {{ genre.name }}
+            <span *ngIf="!last">, </span>
+        </ng-container>
+    </div><hr>
+    <div class="information">
+        <h3>Platforms:</h3>
+        <ng-container *ngFor="let item of game.platforms; let last = last">
+            {{ item.platform.name }}
+            <span *ngIf="!last">, </span>
+        </ng-container>
+    </div><hr>
+    <div class="information">
+        <h3>Publishers:</h3>
+        <ng-container *ngFor="let publisher of game.publishers; let last = last">
+            {{ publisher.name }}
+            <span *ngIf="!last">, </span>
+        </ng-container>
+    </div><hr>
+    <div class="information">
+        <h3>Rating:</h3> {{ game.rating }}/{{game.rating_top}}
+    </div><hr>
+    <div class="information">
+        <h3>Tags:</h3>
+        <ng-container *ngFor="let tag of game.tags; let last = last">
+            {{ tag.name }}
+            <span *ngIf="!last">, </span>
+        </ng-container>
+    </div><hr>
+    <div class="information">
+        <h3>Website:</h3>
+        <a href="{{ game.website }}">{{ game.website }}</a>
+    </div><hr>
+    <div class="information" id="description-text">
+        <h3>Description:</h3>
+        <div [innerHTML]="game.description" class="descriptionSize"></div>
+    </div>
+    <div id="carouselScreenshots" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li *ngFor="let screenshot of screenshots; let i = index" [class.active]="i === 0" (click)="changeSlide(i)"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div *ngFor="let screenshot of screenshots; let i = index" class="carousel-item" [class.active]="i === 0">
+                <img class="d-block w-100" [src]="screenshot.image" alt="Screenshot {{ i + 1 }}">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselScreenshots" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselScreenshots" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>

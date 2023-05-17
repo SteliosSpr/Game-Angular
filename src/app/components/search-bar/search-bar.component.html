@@ -1,0 +1,6 @@
+<form>
+    <input type="text" name="searchText" [(ngModel)]="searchText" placeholder="Search for Game Titles...">
+    <button id="searchButton">
+        <a [routerLink]="'search_results/' + searchText">Search</a>
+    </button>
+</form>

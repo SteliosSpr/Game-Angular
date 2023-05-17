@@ -1,0 +1,40 @@
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    margin-top: 30px;
+}
+
+input {
+    background-color: rgba(255,255,255,255);
+    color: rgba(155,155,155,255);
+    width: 40%;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    padding: 5px;
+}
+
+#searchButton {
+    background-color: rgba(249,117,118,255);
+    color: rgba(254,233,234,255);
+    width: 20%;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding: 5px;
+}
+
+#searchButton a {
+    text-decoration: none;
+    color: rgba(253,232,233,255);
+}
+
+@media screen and (min-width: 1000px) {
+    input {
+        width: 30%;
+    }
+
+    #searchButton {
+        width: 10%;
+    }
+}

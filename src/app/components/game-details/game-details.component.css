@@ -1,0 +1,43 @@
+img {
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.descriptionSize {
+    font-size: small;
+    text-align: center;
+}
+
+.description-container {
+    display: grid;
+    place-items: center;
+
+}
+
+#carouselScreenshots {
+    width: 100%;
+}
+
+.carousel-indicators {
+    background: transparent;
+}
+
+.description-container *{
+    text-align: center;
+}
+
+.information {
+    border-bottom: 3px solid rgba(211,211,211,255);
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+#description-text {
+    padding-left: 10px;
+    padding-right: 10px;
+}

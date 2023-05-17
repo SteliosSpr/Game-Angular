@@ -1,0 +1,33 @@
+img {
+    width: 80%;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 40px;
+}
+
+.imageBackground {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.imageText {
+    position: absolute;
+    bottom: 20px;
+    font-size: small;
+    background-color: transparent;
+}
+
+.imageText *{
+    background-color: transparent;
+    margin: 0;
+}
+
+.releaseDateFont {
+    font-size: x-small;
+}

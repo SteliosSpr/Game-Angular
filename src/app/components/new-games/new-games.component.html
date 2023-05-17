@@ -1,0 +1,10 @@
+<h2>New Games</h2>
+<div *ngFor="let game of newGames">
+    <div class="imageBackground">
+        <a routerLink=""><img src="{{ game.background_image }}" alt=""></a>
+        <div class="imageText">
+            <p>{{game.name}}</p>
+            <p class="releaseDateFont">Release Date: {{ game.released }}</p>
+        </div>
+    </div>
+</div>
