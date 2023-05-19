@@ -1,30 +1,23 @@
 img {
-    width: 80%;
+    width: 100%;
+    height: auto;
     margin-bottom: 20px;
 }
 
 h2 {
     margin-top: 30px;
     margin-bottom: 20px;
+    font-weight: bold;
 }
 
-.descriptionSize {
-    font-size: small;
-    text-align: center;
+h3 {
+    font-weight: bold;
+    color: rgba(249,117,118,255);
 }
 
 .description-container {
-    display: grid;
-    place-items: center;
-
-}
-
-#carouselScreenshots {
-    width: 100%;
-}
-
-.carousel-indicators {
-    background: transparent;
+    font-size: small;
+    text-align: center;
 }
 
 .description-container *{
@@ -40,4 +33,25 @@ h2 {
 #description-text {
     padding-left: 10px;
     padding-right: 10px;
+}
+
+
+#carouselScreenshots {
+    width: 100%;
+}
+
+.carousel-indicators {
+    background: transparent;
+}
+
+@media screen and (min-width: 360px) {
+    .description-container {
+        font-size: large;
+    }
+}
+
+@media screen and (min-width: 1360px) {
+    .description-container {
+        font-size: x-large;
+    }
 }

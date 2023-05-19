@@ -1,10 +1,12 @@
 <h2>Popular Games</h2>
-<div *ngFor="let game of popularGames">
-    <div class="imageBackground">
-        <a routerLink=""><img src="{{ game.background_image }}" alt=""></a>
-        <div class="imageText">
-            <p>{{game.name}}</p>
-            <p class="releaseDateFont">Release Date: {{ game.released }}</p>
-        </div>
+<div class="gameContainer">
+    <div *ngFor="let game of popularGames" class="gameItem">
+        <a [routerLink]="['/game', game.id]">
+            <img src="{{ game.background_image }}" alt="">
+            <div class="imageText">
+                <p>{{game.name}}</p>
+                <p class="releaseDateFont">Release Date: {{ game.released }}</p>
+            </div>
+        </a>
     </div>
 </div>

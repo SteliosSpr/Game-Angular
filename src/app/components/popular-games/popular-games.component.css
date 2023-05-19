@@ -1,33 +1,78 @@
-img {
-    width: 80%;
-}
-
 h2 {
     text-align: center;
     margin-bottom: 30px;
-    margin-top: 40px;
 }
 
-.imageBackground {
-    position: relative;
+.gameContainer {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 50px;
+}
+
+.gameItem {
+    max-width: 90%;
+    margin: 10px auto;
+    position: relative;
     text-align: center;
-    padding-bottom: 20px;
+}
+
+.gameItem a {
+    display: block;
+    position: relative;
+}
+
+.gameItem img {
+    width: 100%;
+    height: auto;
 }
 
 .imageText {
     position: absolute;
-    bottom: 20px;
-    font-size: small;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     background-color: transparent;
+    font-size: small;
+    padding-bottom: 0;
 }
 
-.imageText *{
+.imageText p {
     background-color: transparent;
     margin: 0;
 }
 
 .releaseDateFont {
     font-size: x-small;
+}
+
+@media screen and (min-width: 360px) {
+    .imageText {
+        font-size: large;
+    }
+
+    .releaseDateFont {
+        font-size: medium;
+    }
+
+}
+
+@media screen and (min-width: 1360px) {
+    .gameContainer {
+        justify-content: flex-start;
+    }
+
+    .gameItem {
+        max-width: 23%;
+        height: 400px;
+    }
+
+    .gameItem a {
+        height: 100%;
+    }
+
+    .gameItem img {
+        height: 100%;
+        object-fit: cover;
+    }
 }

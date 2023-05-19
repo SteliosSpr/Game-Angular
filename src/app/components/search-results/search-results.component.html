@@ -1,10 +1,13 @@
 <h2>Search Game Results</h2>
-<div *ngFor="let game of gameResults">
-    <div class="imageBackground">
-        <a [routerLink]="['/game', game.id]"><img src="{{ game.background_image }}" alt=""></a>
-        <div class="imageText">
-            <p>{{game.name}}</p>
-            <p class="releaseDateFont">Release Date: {{ game.released }}</p>
-        </div>
+<div class="gameContainer">
+    <div *ngFor="let game of gameResults" class="gameItem">
+        <a [routerLink]="['/game', game.id]">
+            <img src="{{ game.background_image }}" alt="">
+            <div class="imageText">
+                <p>{{game.name}}</p>
+                <p class="releaseDateFont">Release Date: {{ game.released }}</p>
+            </div>
+        </a>
     </div>
 </div>
+
